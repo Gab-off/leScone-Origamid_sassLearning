@@ -1,0 +1,73 @@
+@use 'grid' as g;
+@use 'variaveis-e-mixins' as vm;
+
+ .contato {
+ 	margin-top: 120px;
+ 	margin-bottom: 120px;
+ 	@include g.d(s) {
+ 		margin-top: 60px;
+ 		margin-bottom: 60px;
+ 	}
+ }
+
+ .contato form {
+ 	label {
+ 		@include vm.tipo-1(18);
+ 		display: block;
+ 	}
+ 	input[type="text"], textarea {
+	 	@include vm.tipo-1(18);
+	 	color: vm.$cinza;
+	 	width: 100%;
+	 	padding: 0 5px;
+	 	height: 40px;
+	 	border: 2px solid vm.$bege-escuro;
+	 	background: transparent;
+	 	margin-bottom: 1em;
+	 	&:hover, &:focus {
+	 		outline: none;
+	 		border-color: vm.$bege-medio;
+ 		}
+	}
+	textarea {
+		height: 120px;
+	}
+ }
+
+ input.button {
+ 	@include vm.tipo-1(18);
+ 	cursor: pointer;
+ 	color: vm.$bege-medio;
+ 	text-transform: uppercase;
+ 	border: 2px solid vm.$bege-escuro;
+ 	background: transparent;
+ 	display: block;
+ 	width: 200px;
+ 	padding-top: 5px;
+	box-shadow: 5px 5px 0 -2px vm.$bege-medio, 5px 5px 0 0 vm.$bege-escuro;
+	transition: .3s;
+	&:hover {
+		box-shadow: 3px 3px 0 -2px vm.$bege-medio, 3px 3px 0 0 vm.$bege-escuro;
+	}
+ }
+
+.contato-info {
+	display: inline-block;
+	color: vm.$bege-escuro;
+	margin-top: 2em;
+	margin-bottom: 3em;
+	@include g.d(l) {
+		float: right;
+		text-align: right;
+		margin-top: -3em;
+	}
+}
+
+.contato-mapa {
+	display: block;
+	box-shadow: 0 0 0 10px vm.$bege-medio;
+	clear: both;
+	img {
+		width: 100%;
+	}
+}

@@ -1,0 +1,40 @@
+@use 'grid' as g;
+@use 'variaveis-e-mixins' as vm;
+
+body {
+	background: vm.$bege-claro;
+	border: 10px solid vm.$bege-medio;
+	color: vm.$cinza;
+	@include g.d(s) {
+		border: none;
+	}
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+p {
+	@include vm.tipo-1(18);
+}
+
+.titulo {
+	@include vm.tipo-1(18);
+	text-transform: uppercase;
+	@include g.d(s) {
+		margin-bottom: 40px;
+	}
+	&::after {
+		content: '';
+		display: block;
+		width: 75%;
+		float: right;
+		height: 2px;
+		background: vm.$cinza;
+		margin-top: 14px;
+		@include g.d(m) {
+			width: 60%;
+		}
+	}
+}

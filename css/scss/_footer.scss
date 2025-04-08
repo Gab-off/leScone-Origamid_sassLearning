@@ -1,0 +1,21 @@
+@use 'grid' as g;
+@use 'variaveis-e-mixins' as vm;
+
+footer {
+	padding: 20px 0;
+	background: vm.$cinza;
+	box-shadow: 0 0 0 10px vm.$cinza;
+	p {
+		color: vm.$bege-claro;
+		@include g.d(s) {
+			text-align: center;
+		}
+	}
+	a img {
+		float: right;
+		@include g.d(s) {
+			float: none;
+			margin: 20px auto;
+		}
+	}
+}

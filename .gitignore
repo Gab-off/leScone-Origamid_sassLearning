@@ -1,0 +1,31 @@
+# Diretórios de dependências (Node.js/npm/yarn)
+node_modules/
+
+# Arquivos do Sass compilados (CSS e mapas)
+*.css
+*.css.map
+
+# Cache/arquivos temporários
+.sass-cache/
+.temp/
+
+# Configurações locais/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Variáveis de ambiente/sensíveis
+.env
+.env.local
+
+# Sistemas operacionais
+.DS_Store
+Thumbs.db
+
+# Logs e relatórios
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
